@@ -1,2 +1,2 @@
-export const getContacts = store => store.persistedReducer.contacts;
-export const getFilter = store => store.persistedReducer.filter;
+export const getContacts = store => store.rootReducer.contacts.items;
+export const getFilter = store => store.rootReducer.filter;

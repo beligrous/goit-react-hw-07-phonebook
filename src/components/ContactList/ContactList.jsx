@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { delContact } from 'redux/contacts-slice';
+import { deleteContact } from '../../redux/operations';
 import { getContacts, getFilter } from '../../redux/selectors';
 import { List, Delete, ListItem } from './contact-list.styled';
 
@@ -11,7 +11,7 @@ function ContactList() {
   let initContacts = contacts ? contacts : [];
 
   const onClickDelete = id => {
-    dispatch(delContact(id));
+    dispatch(deleteContact(id));
   };
 
   const findContacts = () => {
