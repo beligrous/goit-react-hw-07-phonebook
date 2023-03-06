@@ -13,6 +13,6 @@ export const addNewContact = async data => {
 };
 
 export const delContact = async id => {
-  const response = await axios.delete(`/phonebook/contacts/${id}`, id);
+  const response = await axios.delete(`/phonebook/contacts/${id}`);
   return response;
 };
